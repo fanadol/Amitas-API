@@ -5,13 +5,9 @@ use \Psr\Http\Message\ResponseInterface as Response;
 
 $app = new \Slim\App;
 
-//SHOW ANNOUNCEMENT
-function Announcement(){
-	$sql = "SELECT po.post_id, atc.img_path 
-          FROM post po 
-          JOIN attachments atc 
-          ON po.post_id = atc.post_id
-          WHERE atc.img_type='banner'";
+//SHOW TAGS
+function Tags(){
+	$sql = "SELECT * FROM label";
     try {
       $db = new db();
       $db = $db->connect();

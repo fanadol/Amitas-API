@@ -40,4 +40,19 @@ function detailID($id){
 }
 
 
-//UPDATE USER
+//GET ATRIBUTE ID
+function attID($id){
+  try{
+       $db = new db();
+       $db = $db->connect();
+
+       $sql = "SELECT user_id, name, status, prodi, user_photo FROM user WHERE user_id = $id";
+       $query = $db->query($sql);
+       $result = $query->fetchObject();
+       $db = null;
+       return $result;
+    
+   } catch(Exception $ex){
+       return $response->withJson(array('error' => $ex->getMessage()),422);
+   }
+}

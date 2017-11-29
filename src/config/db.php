@@ -3,7 +3,7 @@
 class db
 {
 	private $dbhost = 'localhost';
-	private $dbname = 'test';
+	private $dbname = 'amitas_db';
 	private $dbuser = 'root';
 	private $dbpass = '';
 
