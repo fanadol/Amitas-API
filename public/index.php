@@ -13,6 +13,9 @@ $app->get('/hello/{name}', function (Request $request, Response $response) {
     return $response;
 });
 
+
 //User Routes
-require '../src/routes/API.php';
+require '../src/routes/api.php';
+
+
 $app->run();
